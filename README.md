@@ -6,7 +6,7 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 
 ## Live Demo
 
-Check out the live version of my portfolio [here](https://somanathan-portfolio.netlify.app/).
+Check out the live version of my portfolio [here](https://somanthan-portfolio.netlify.app/).
 
 ## Table of Contents
 
