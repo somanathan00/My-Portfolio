@@ -1,17 +1,28 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-
+import menu_open from '../../assets/menu_open.svg'
+import menu_close from '../../assets/menu_close.svg'
+import { useRef } from 'react'
 const Navbar = () => {
     const [menu, setMenu] = useState("home")
-
+    const menuRef=useRef()
+    const openMenu= ()=>{
+        menuRef.current.style.right='0';
+    }
+    const closeMenu= ()=>{
+        menuRef.current.style.right='-350px';
+    }
     const handleMenuClick = (menuItem) => {
         setMenu(menuItem)
     }
 
     return (
         <div className='navbar'>
-            <ul className="nav-menu">
+            <h1>Portfolio</h1>
+            <img onClick={openMenu} src={menu_open} alt="" className='nav-mob-open'/>
+            <ul ref={menuRef} className="nav-menu">
+                <img src={menu_close} alt=""  onClick={closeMenu} className='nav-mob-close'/>
                 <li onClick={() => handleMenuClick("home")}>
                     <AnchorLink className='anchor-link' href='#home'>
                         <p className={menu === "home" ? "active" : ""}>Home</p>
