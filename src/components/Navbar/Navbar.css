@@ -5,6 +5,8 @@
     justify-content: space-between;
     margin: 20px 170px;
     flex-wrap: wrap; /* Allow wrapping */
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Add animation */
 }
 
 /* Navigation menu */
@@ -15,6 +17,8 @@
     gap: 60px;
     font-size: 20px;
     margin-left: 30px;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Add animation */
 }
 
 .nav-menu li {
@@ -31,6 +35,8 @@
     font-size: 22px;
     cursor: pointer;
     color: black;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Add animation */
 }
 
 .nav-connect:hover {
@@ -101,7 +107,15 @@
         padding-left: 100px;
         flex-direction: row;
         gap: 20px;
-        }
-    
+    }
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

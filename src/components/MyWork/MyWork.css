@@ -6,6 +6,8 @@
     justify-content: center;
     gap: 80px;
     margin: 80px 170px;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Add animation */
 }
 
 /* Work container images */
@@ -15,6 +17,8 @@
     height: 280px;
     transition: 0.3s;
     cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Add animation */
 }
 
 /* Work container grid */
@@ -22,11 +26,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Add animation */
 }
 
 /* Work title */
 .mywork-title {
     position: relative;
+    opacity: 0;
+    animation: fadeIn 1.2s forwards; /* Add animation */
 }
 
 .mywork-title h1 {
@@ -106,5 +114,15 @@
 
     .mywork-title h1 {
         font-size: 30px;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

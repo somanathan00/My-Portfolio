@@ -5,6 +5,8 @@
     align-items: center;
     flex-direction: column;
     gap: 35px;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Add animation */
 }
 
 /* Hero title */
@@ -13,6 +15,8 @@
     width: 70%;
     font-size: 80px;
     font-weight: 600;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Add animation */
 }
 
 .hero h1 span {
@@ -28,6 +32,8 @@
     text-align: center;
     font-size: 24px;
     line-height: 40px;
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Add animation */
 }
 
 /* Hero action buttons */
@@ -38,6 +44,8 @@
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeIn 2.5s forwards; /* Add animation */
 }
 
 /* Connect button */
@@ -152,23 +160,38 @@
         font-size: 16px;
     }
 }
-.nothing{
+
+.nothing {
     text-decoration: none;
     color: white;
 }
-.social-links img{
+
+.social-links img {
     width: 50px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
 }
-.social-links{
+
+.social-links {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-
+    opacity: 0;
+    animation: fadeIn 3s forwards; /* Add animation */
 }
+
 .social-links img:hover {
     transform: scale(1.2); /* Scale the image on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

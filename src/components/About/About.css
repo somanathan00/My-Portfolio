@@ -6,6 +6,18 @@
     justify-content: center;
     gap: 80px;
     margin: 80px 170px;
+    opacity: 0; /* initially hide the About section */
+    animation: fadeIn 1s ease forwards; /* apply fade-in animation */
+}
+
+/* Define fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* About title */

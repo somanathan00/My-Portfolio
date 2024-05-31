@@ -1,11 +1,21 @@
-*{
-  margin: 0;
-  padding: 0;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-body{
+* {
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1s ease forwards; /* Apply fade-in animation to all elements */
+}
+
+body {
   height: 100vh;
-  background:black;
+  background: black;
   color: white;
   font-family: 'outfit';
 }
