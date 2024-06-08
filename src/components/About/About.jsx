@@ -27,10 +27,10 @@ export const About = () => {
               <p>C++</p>
             </div>
             <div className='about-skill'>
-              <p>JavaScript (Basic)</p>
+              <p>JavaScript </p>
             </div>
             <div className='about-skill'>
-              <p>React.js & Node.js (Currently Learning)</p>
+              <p>React.js & Node.js </p>
             </div>
             <div className='about-skill'>
               <p>SQL (MySQL, PostgreSQL)</p>
@@ -42,7 +42,7 @@ export const About = () => {
               <p>Git & GitHub</p>
             </div>
             <div className='about-skill'>
-              <p>Flask</p>
+              <p>Flask & Django</p>
             </div>
             <div className='about-skill'>
               <p>Data Analysis</p>
