@@ -30,7 +30,7 @@ export const About = () => {
               <p>JavaScript </p>
             </div>
             <div className='about-skill'>
-              <p>React.js & Node.js </p>
+              <p>React.js  </p>
             </div>
             <div className='about-skill'>
               <p>SQL (MySQL, PostgreSQL)</p>
