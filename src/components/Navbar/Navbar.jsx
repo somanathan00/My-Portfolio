@@ -35,7 +35,7 @@ const Navbar = () => {
                 </li>
                 <li onClick={() => handleMenuClick("portfolio")}>
                     <AnchorLink className='anchor-link' href='#work' offset={50}>
-                        <p className={menu === "portfolio" ? "active" : ""}>Portfolio</p>
+                        <p className={menu === "portfolio" ? "active" : ""}>Projects</p>
                     </AnchorLink>
                 </li>
                 <li onClick={() => handleMenuClick("contact")}>

@@ -6,84 +6,154 @@
     justify-content: center;
     gap: 80px;
     margin: 80px 170px;
-    opacity: 0; /* initially hide the About section */
-    animation: fadeIn 1s ease forwards; /* apply fade-in animation */
+    color: #ccd6f6;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
 }
 
-/* Define fade-in animation */
+/* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover animation */
+@keyframes skillHover {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
     }
 }
 
 /* About title */
 .about-title {
     position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
 }
 
 .about-title h1 {
-    padding: 0px 30px;
-    font-size: 80px;
+    padding: 0 30px;
+    font-size: 2.5rem;
     font-weight: 600;
+    color: #2e79f0;
+    position: relative;
 }
 
-h2{
+.about-title h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #2e79f0;
+    border-radius: 2px;
+}
+
+/* Subtitle */
+h2 {
     display: flex;
     align-items: center;
-    padding: 0px 30px;
-    font-size: 60px;
-    font-weight: 600;
     justify-content: center;
-}
-/* About sections layout */
-.about-sections {
-    display: flex;
-    gap: 80px;
+    padding: 0 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2e79f0;
+    margin-bottom: 40px;
 }
 
-/* Right side of the about section */
+/* About layout */
+.about-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Right section */
 .about-right {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 60px;
 }
 
-/* About paragraph */
+/* Paragraph */
 .about-para {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #a8b2d1;
 }
 
-/* About skills */
+/* Skills grid */
 .about-skills {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
-    margin-bottom: 50px;
+    margin: 30px 0 50px;
+    width: 100%;
 }
 
-/* Individual skill */
+/* Skill card */
 .about-skill {
-    display: grid;
-    gap: 0px;
+    display: flex;
     align-items: center;
-    transition: 0.3s;
-    padding: 5px 5px;
-    border-radius: 30px;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background: rgba(62, 123, 222, 0.1);
+    border: 2px solid rgba(62, 123, 222, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.about-skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(138, 180, 248, 0.2);
+    border-color: rgba(138, 180, 248, 0.5);
+}
+
+.about-skill::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: linear-gradient(264deg, #8ab4f8 -5.09%, #3e7bde 106.28%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.about-skill:hover::before {
+    opacity: 0.1;
 }
 
 .about-skill p {
-    min-width: 20px;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 500;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    white-space: nowrap;
 }
 
 /* Media Queries */
@@ -93,7 +163,7 @@ h2{
     }
 
     .about-title h1 {
-        font-size: 60px;
+        font-size: 2rem;
     }
 
     .about-sections {
@@ -102,19 +172,15 @@ h2{
     }
 
     .about-right {
-        gap: 50px;
+        gap: 40px;
     }
 
     .about-para {
-        font-size: 22px;
+        font-size: 1.1rem;
     }
 
     .about-skills {
         grid-template-columns: repeat(4, 1fr);
-    }
-
-    .about-skill p {
-        font-size: 12px;
     }
 }
 
@@ -124,11 +190,11 @@ h2{
     }
 
     .about-title h1 {
-        font-size: 50px;
+        font-size: 1.8rem;
     }
 
     .about-para {
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     .about-skills {
@@ -142,15 +208,27 @@ h2{
     }
 
     .about-title h1 {
-        font-size: 40px;
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
     }
 
     .about-para {
-        font-size: 18px;
+        font-size: 0.95rem;
     }
 
     .about-skills {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-skill {
+        padding: 10px 15px;
+    }
+
+    .about-skill p {
+        font-size: 0.8rem;
     }
 }
 
@@ -160,18 +238,28 @@ h2{
     }
 
     .about-title h1 {
-        font-size: 30px;
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        padding: 0 15px;
     }
 
     .about-para {
-        font-size: 16px;
+        font-size: 0.9rem;
     }
 
     .about-skills {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .about-skill {
+        padding: 8px 12px;
     }
 
     .about-skill p {
-        font-size: 14px;
+        font-size: 0.75rem;
     }
 }

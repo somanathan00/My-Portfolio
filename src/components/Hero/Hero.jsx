@@ -9,8 +9,8 @@ import github from '../../assets/github.jpg';
 const Hero = () => {
   return (
     <div className='hero' id='home'>
-      <h1><span>I'm Somanathan</span>, Software Developer</h1>
-      <p>I am a B.Tech-IT graduate seeking an entry-level software developer role.</p>
+      <h1><span>I'm Somanathan P</span>, Software Engineer</h1>
+      <p>Motivated Software Engineer with expertise in backend development, automation, and real-time systems.</p>
       <div className='social-links'>
         <a className='anchor-link' href='https://leetcode.com/somanathan00/' target='_blank' rel='noopener noreferrer'>
           <img src={leetcode} alt='LeetCode Profile' />
@@ -30,7 +30,7 @@ const Hero = () => {
           <AnchorLink className='anchor-link' href='#contact' offset={50}>Connect with me</AnchorLink>
         </div>
         <div className='hero-resume'>
-          <a href='https://drive.google.com/file/d/1hFg5XC4qOaIOFxk8i9EH50RZBGUvCzC0/view?usp=sharing' target='_blank' rel='noopener noreferrer' className='nothing'>My Resume</a>
+          <a href='https://drive.proton.me/urls/96BKH5T398#xDtblQ68qRhq' target='_blank' rel='noopener noreferrer' className='nothing'>My Resume</a>
         </div>
       </div>
     </div>

@@ -5,18 +5,19 @@
     align-items: center;
     flex-direction: column;
     gap: 35px;
+    color: #ccd6f6;
     opacity: 0;
-    animation: fadeIn 1s forwards; /* Add animation */
+    animation: fadeIn 1s forwards;
 }
 
 /* Hero title */
 .hero h1 {
     text-align: center;
     width: 70%;
-    font-size: 80px;
+    font-size: 3rem;
     font-weight: 600;
     opacity: 0;
-    animation: fadeIn 1.5s forwards; /* Add animation */
+    animation: fadeIn 1.5s forwards;
 }
 
 .hero h1 span {
@@ -30,10 +31,11 @@
 .hero p {
     width: 50%;
     text-align: center;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #a8b2d1;
     opacity: 0;
-    animation: fadeIn 2s forwards; /* Add animation */
+    animation: fadeIn 2s forwards;
 }
 
 /* Hero action buttons */
@@ -41,11 +43,11 @@
     display: flex;
     align-items: center;
     gap: 25px;
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 50px;
     opacity: 0;
-    animation: fadeIn 2.5s forwards; /* Add animation */
+    animation: fadeIn 2.5s forwards;
 }
 
 /* Connect button */
@@ -53,38 +55,43 @@
     padding: 20px 45px;
     border-radius: 50px;
     background: linear-gradient(264deg, #8ab4f8 0.36%, #3e7bde 102.06%);
+    transition: all 0.3s ease;
 }
 
 /* Resume button */
 .hero-resume {
     padding: 20px 45px;
     border-radius: 50px;
-    border: 2px solid #FFF;
+    border: 2px solid #3e7bde;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
 /* Hover effects */
 .hero-connect:hover {
-    border: 2px solid white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(62, 123, 222, 0.3);
 }
 
 .hero-resume:hover {
-    border-color: rgb(58, 58, 128);
+    transform: translateY(-2px);
+    border-color: #8ab4f8;
+    box-shadow: 0 4px 12px rgba(62, 123, 222, 0.2);
 }
 
 /* Media Queries */
 @media (max-width: 1200px) {
     .hero h1 {
-        font-size: 60px;
+        font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 20px;
+        font-size: 1.1rem;
         width: 60%;
     }
 
     .hero-action {
-        font-size: 22px;
+        font-size: 1.1rem;
     }
 }
 
@@ -94,70 +101,66 @@
     }
 
     .hero h1 {
-        font-size: 50px;
+        font-size: 2rem;
         width: 80%;
     }
 
     .hero p {
-        font-size: 18px;
         width: 70%;
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
     .hero-action {
+        font-size: 1rem;
         flex-direction: column;
-        gap: 15px;
-        font-size: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .hero {
         margin-top: 100px;
+        gap: 25px;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: 1.8rem;
+        width: 90%;
     }
 
     .hero p {
-        font-size: 16px;
-        width: 80%;
+        width: 85%;
+        font-size: 0.95rem;
     }
 
     .hero-action {
-        font-size: 18px;
+        gap: 15px;
     }
 
     .hero-connect,
     .hero-resume {
-        padding: 15px 30px;
-        font-size: 18px;
+        padding: 15px 35px;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .hero {
         margin-top: 80px;
     }
 
     .hero h1 {
-        font-size: 30px;
-        width: 90%;
+        font-size: 1.5rem;
     }
 
     .hero p {
-        font-size: 14px;
         width: 90%;
-    }
-
-    .hero-action {
-        font-size: 16px;
+        font-size: 0.9rem;
     }
 
     .hero-connect,
     .hero-resume {
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: 12px 30px;
+        font-size: 0.9rem;
     }
 }
 
@@ -167,9 +170,9 @@
 }
 
 .social-links img {
-    width: 50px;
+    width: 30px;
     border: none;
-    border-radius: 50px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
@@ -179,11 +182,11 @@
     justify-content: space-between;
     gap: 20px;
     opacity: 0;
-    animation: fadeIn 3s forwards; /* Add animation */
+    animation: fadeIn 3s forwards;
 }
 
 .social-links img:hover {
-    transform: scale(1.2); /* Scale the image on hover */
+    transform: scale(1.2);
 }
 
 /* Fade-in animation */
